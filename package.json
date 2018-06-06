@@ -1,0 +1,22 @@
+{
+  "name": "designhaus",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "^5.0.4",
+    "react": "^16.4.0",
+    "react-burger-menu": "^2.4.4",
+    "react-dom": "^16.4.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "firebase deploy",
+    "firebase-init": "firebase login && firebase init",
+    "firebase-deploy": "npm run build && firebase deploy"
+  }
+}
