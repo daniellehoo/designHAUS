@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {db} from '../firebase';
 import DesignObjectImg from "./DesignObjectImg"
+import DesignObjectLink from "./DesignObjectLink"
+
 
 class Landing extends Component{
   constructor(props){
@@ -15,10 +17,9 @@ class Landing extends Component{
   };
 
   componentDidMount(){
-    db.getRandomDesignObject().then( obj => {
-      this.setState(() => ({ randomDesignObject: obj }));
-    }
-    );
+    // db.getRandomDesignObject().then( obj => {
+    //   this.setState(() => ({ randomDesignObject: obj }));
+    // });
   }
 
   rerollRandom() {
@@ -39,14 +40,7 @@ class Landing extends Component{
         <button className="homeButton" onClick={this.rerollRandom}>
           <i className="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp;&nbsp;G E N E R A T E
         &nbsp; I N S P I R A T I O N <i className="fa fa-lightbulb-o" aria-hidden="true"></i></button>
-        <div className={this.state.styleClass}>
-          <Link
-            to={{pathname:`/designObject/${randomDesignObjectName}`,
-            state: {src: randomDesignObjectSrc} }}>
-            <DesignObjectImg src={randomDesignObjectSrc} />
-          </Link>
-          <h2>{randomDesignObjectName}</h2>
-        </div>
+        <DesignObjectLink src={randomDesignObjectSrc} name={randomDesignObjectName}/>
       </div>
     );
   }

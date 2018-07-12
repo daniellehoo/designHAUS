@@ -18,7 +18,8 @@ button.homeButton {
   border-radius: 5px;
   box-shadow: 2px 2px 8px grey;
   padding: 20px;
-  margin: 6px;
+  margin: 10px;
+  margin-bottom: 25px;
 }
 
 button:hover {
@@ -190,7 +191,7 @@ li {
   width: 250px;
   border-radius: 50%;
   opacity: 0;
-  transition: .5s ease;
+  transition: .01s ease;
   background-color: #000;
   margin: auto;
 }
@@ -302,6 +303,7 @@ a.menu-item:hover {
 }
 
 .signup_link {
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
   width: 150px;
