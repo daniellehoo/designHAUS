@@ -85,8 +85,8 @@ class AddFavoriteButton extends Component{
           onClick={this.addFavoriteHandler}
           key={this.state.i}
           id={this.state.designObjectName}
-          ><i className="fas fa-heart"></i>
-            Add Favorite</button>
+          >
+            Add Favorite<i className="fas fa-heart"></i></button>
     )
   }
 

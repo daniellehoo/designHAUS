@@ -54,7 +54,9 @@ class Category extends Component{
             <div className="design_object_title">
               <Link className="design_object_title"
                 to={{pathname:`/designObject/${k}`,
-                state: {src: this.state.design_entities[k].img_url} }}>{k}
+                state: {
+                  src: this.state.design_entities[k].img_url
+                } }}>{k}
               </Link>
             </div>
             </div>
